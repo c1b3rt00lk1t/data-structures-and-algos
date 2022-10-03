@@ -19,32 +19,45 @@ class BinarySearchTree {
             this.root = node;
             return this;
         } else {
-            let prev = this.root;
-            while(value != prev.value){
-
-                if( value > prev.value){
-                    if (prev.right){
-                        prev = prev.right;
+            let current = this.root;
+            while(value != current.value){
+                if( value > current.value){
+                    if (current.right){
+                        current = current.right;
                     } else {
-                        prev.right = node;
+                        current.right = node;
                         return this;
                     }
-                    
                 } else {
-                    if (prev.left){
-                        prev = prev.left;
+                    if (current.left){
+                        current = current.left;
                     } else {
-                        prev.left = node;
+                        current.left = node;
                         return this;
                     }
-                    
                 }
-                
-                
-                
             }
+        }
+    }
+
+    find(value){
+        if(this.root === null){
+            return false;
+        }
+        let current = this.root
+        while(current && value != current.value){
+            if(value > current.value){
+                current = current.right;
+            } else {
+                current = current.left;
+            }
+        }
+        if(!current){
+            return false;
+        } else {
+            return current;
         }
     }
 }
 
-const tree = new BinarySearchTree(10)
+const tree = new BinarySearchTree()
