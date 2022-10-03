@@ -20,7 +20,7 @@ class BinarySearchTree {
             return this;
         } else {
             let prev = this.root;
-            while(true){
+            while(value != prev.value){
 
                 if( value > prev.value){
                     if (prev.right){
