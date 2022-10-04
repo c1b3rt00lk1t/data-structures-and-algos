@@ -58,6 +58,54 @@ class BinarySearchTree {
             return current;
         }
     }
+
+     contains(value) {
+    if (value === this.root.value){
+      return true;
+    } else {
+      let currentNode = this.root;
+      while (currentNode.value !== value){
+        if(currentNode.value > value){
+          if(!currentNode.left) return false;
+          currentNode = currentNode.left;
+        } else {
+          if(!currentNode.right) return false;
+          currentNode = currentNode.right;
+        }        
+      }
+      return true;
+    }    
+  }
+
+  removeBranch(value) {
+    if (this.root && (this.root.left || this.root.right)){
+      let previousNode = null;
+      let currentNode = this.root;
+      let previousMove = null;
+      
+      while (currentNode){
+        if(currentNode.value > value){
+          previousNode = currentNode;
+          currentNode = currentNode.left;
+          previousMove = 0;
+        } else if(currentNode.value < value){
+          previousNode = currentNode;
+          currentNode = currentNode.right;
+          previousMove = 1;
+        } else {
+          if(!previousMove){
+            previousNode.left = null;
+          } else {
+            previousNode.right = null;
+          }
+          return this;
+        }
+      }
+
+    }
+  }
+ 
+   
 }
 
 const tree = new BinarySearchTree()
