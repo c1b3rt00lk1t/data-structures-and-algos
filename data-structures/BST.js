@@ -64,18 +64,19 @@ class BinarySearchTree {
       return true;
     } else {
       let currentNode = this.root;
-      while (currentNode.value !== value){
+      while(currentNode){
         if(currentNode.value > value){
-          if(!currentNode.left) return false;
           currentNode = currentNode.left;
-        } else {
-          if(!currentNode.right) return false;
+        } else if (currentNode.value < value){
           currentNode = currentNode.right;
-        }        
+        } else {
+          return true;
+        }
       }
-      return true;
-    }    
-  }
+      return false;
+
+      }    
+    }
 
   removeBranch(value) {
     if (this.root && (this.root.left || this.root.right)){
