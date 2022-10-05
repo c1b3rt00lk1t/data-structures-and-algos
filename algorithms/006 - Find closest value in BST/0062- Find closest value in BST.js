@@ -34,7 +34,6 @@ class BST {
   }
 }
 
-// Do not edit the line below.
-exports.findClosestValueInBst = findClosestValueInBst;
+
 
   

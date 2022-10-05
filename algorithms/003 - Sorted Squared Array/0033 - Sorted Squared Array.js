@@ -16,5 +16,5 @@ function sortedSquaredArray(array) {
       
     }
     
-    exports.sortedSquaredArray = sortedSquaredArray;
+
     

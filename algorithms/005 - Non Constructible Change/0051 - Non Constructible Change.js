@@ -16,5 +16,3 @@ function nonConstructibleChange(coins) {
     return acc + 1;
   }
   
-  // Do not edit the line below.
-  exports.nonConstructibleChange = nonConstructibleChange;

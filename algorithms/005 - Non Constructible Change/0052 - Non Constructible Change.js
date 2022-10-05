@@ -6,5 +6,3 @@ function nonConstructibleChange(coins) {
       .reduce((acc, b) => b > acc + 1 ? acc : acc + b, 0)
   }
   
-  // Do not edit the line below.
-  exports.nonConstructibleChange = nonConstructibleChange;

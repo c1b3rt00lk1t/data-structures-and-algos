@@ -10,5 +10,3 @@ function tournamentWinner(competitions, results) {
     }, {result: 'none', none: 0}).result;
   }
   
-  // Do not edit the line below.
-  exports.tournamentWinner = tournamentWinner;
