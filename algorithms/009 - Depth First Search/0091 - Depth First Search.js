@@ -10,9 +10,8 @@ class Node {
       return this;
     }
   
-    depthFirstSearch(array) {
-      array = getChildrenDepthFirst(this);
-      return array;
+    depthFirstSearch() {
+        return getChildrenDepthFirst(this);
     }
   }
   
