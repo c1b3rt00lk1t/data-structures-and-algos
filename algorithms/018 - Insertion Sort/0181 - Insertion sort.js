@@ -27,7 +27,3 @@ function insertionSort(array) {
     array[targetPosition] = item;
   }
   
-  
-  // Do not edit the line below.
-  exports.insertionSort = insertionSort;
-  
