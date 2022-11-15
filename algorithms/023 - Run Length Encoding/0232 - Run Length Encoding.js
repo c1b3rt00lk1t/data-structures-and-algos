@@ -3,10 +3,9 @@ function runLengthEncoding(string) {
       if (arr[i] === arr[i + 1] && acc.counter < 9){
         acc.counter++;
       } else {
-        acc.output = `${acc.output}${acc.counter}${arr[i]}`;
+        acc.output.push(`${acc.counter}${arr[i]}`);
         acc.counter = 1;
       }
       return acc;
-    }, {output: '', counter: 1}).output;
+    }, {output: [], counter: 1}).output.join('');
   }
-  
