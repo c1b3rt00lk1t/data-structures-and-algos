@@ -1,5 +1,5 @@
 /**
- * Brute force recursive solution for kth largest value in BST
+ * Optimized recursive solution for kth largest value in BST
  * Time complexity: O(h + k)
  * Space complexity: O(h)
  */
