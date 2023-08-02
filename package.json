@@ -1,0 +1,14 @@
+{
+  "name": "data-structures-and-algos",
+  "version": "1.0.0",
+  "description": "Collection of code for several data structures and algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
