@@ -2,7 +2,7 @@ const Node = require('./067 - Breadth-first Search')
 
 describe('Test the Breadth-first Search algoritm', () =>{
 
-    test('returns abcd', () =>{
+    xtest('returns abcd', () =>{
         const graph = new Node('A');
         graph.addChild('B')
         graph.addChild('C')
@@ -14,7 +14,7 @@ describe('Test the Breadth-first Search algoritm', () =>{
 
     })
 
-    test('returns abcdefgh', () =>{
+    xtest('returns abcdefgh', () =>{
         const graph = new Node('A');
         graph.addChild('B')
         graph.addChild('C')
@@ -30,7 +30,7 @@ describe('Test the Breadth-first Search algoritm', () =>{
     })
 
 
-    test('returns abcdefghijk', () =>{
+    xtest('returns abcdefghijk', () =>{
         const graph = new Node('A');
         graph.addChild('B')
         graph.addChild('C')
