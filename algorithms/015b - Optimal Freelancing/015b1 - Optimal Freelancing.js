@@ -1,16 +1,26 @@
 function optimalFreelancing(jobs) {
-  const optimalPayment = jobs
-    .sort(orderCriteria)
-    .reduce((acc, curr, i, arr) => {
+  const optimalPayment = jobs.sort(orderCriteria).reduce(
+    (acc, curr, i, arr) => {
       if (i >= 1 && arr[i].deadline != arr[i - 1].deadline) {
-        acc += arr[i].payment;
+        acc.result += arr[i].payment;
+        acc.lastDeadline++;
+      } else if (
+        i >= 1 &&
+        arr[i].deadline == arr[i - 1].deadline &&
+        acc.possible
+      ) {
+        acc.result += arr[i].payment;
+        acc.possible--;
       } else if (i === 0) {
-        acc += arr[i].payment;
+        acc.result += arr[i].payment;
+        acc.possible = arr[i].deadline - 1;
       }
       return acc;
-    }, 0);
+    },
+    { result: 0, lastDeadline: 0, possible: 0 }
+  );
 
-  return optimalPayment;
+  return optimalPayment.result;
 }
 
 function orderCriteria(a, b) {
