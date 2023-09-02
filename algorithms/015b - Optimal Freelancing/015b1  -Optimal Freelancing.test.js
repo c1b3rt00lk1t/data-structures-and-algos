@@ -91,4 +91,51 @@ describe("Test suite for Optimal Freelancing", () => {
     const result = optimalFreelancing(jobs);
     expect(result).toBe(16);
   });
+
+  test("test 13", () => {
+    const jobs = [
+      {
+        deadline: 1,
+        payment: 1,
+      },
+      {
+        deadline: 2,
+        payment: 1,
+      },
+      {
+        deadline: 3,
+        payment: 1,
+      },
+      {
+        deadline: 4,
+        payment: 1,
+      },
+      {
+        deadline: 5,
+        payment: 1,
+      },
+      {
+        deadline: 6,
+        payment: 1,
+      },
+      {
+        deadline: 7,
+        payment: 1,
+      },
+      {
+        deadline: 8,
+        payment: 1,
+      },
+      {
+        deadline: 9,
+        payment: 1,
+      },
+      {
+        deadline: 10,
+        payment: 1,
+      },
+    ];
+    const result = optimalFreelancing(jobs);
+    expect(result).toBe(7);
+  });
 });
