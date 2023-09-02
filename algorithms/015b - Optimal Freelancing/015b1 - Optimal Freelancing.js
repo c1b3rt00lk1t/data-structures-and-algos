@@ -15,25 +15,17 @@ function optimalFreelancing(jobs) {
     }
   }
   return profit;
-
-  // return jobs.sort(orderCriteria);
 }
 
 function orderCriteria(a, b) {
   const { payment: payment1 } = a;
   const { payment: payment2 } = b;
-
   const order = -1;
-  let orderResult;
-
   if (+payment1 > +payment2) {
-    orderResult = order;
+    return order;
   } else if (+payment1 <= +payment2) {
-    orderResult = -order;
+    return -order;
   }
-
-  console.log(a, b, orderResult);
-  return orderResult;
 }
 
 module.exports = optimalFreelancing;
