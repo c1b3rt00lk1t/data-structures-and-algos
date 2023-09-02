@@ -48,7 +48,7 @@ describe("Test suite for Optimal Freelancing", () => {
       expect(result).toBe(13);
     }
   });
-  test("test case 11", () => {
+  test("optimal is not sequential", () => {
     // [{"deadline": 1, "payment": 4}, {"deadline": 1, "payment": 3}, {"deadline": 2, "payment": 1}, {"deadline": 3, "payment": 2}, {"deadline": 4, "payment": 3}, {"deadline": 4, "payment": 2}, {"deadline": 4, "payment": 1}, {"deadline": 5, "payment": 4}, {"deadline": 8, "payment": 1}]
     const jobs = [
       {
