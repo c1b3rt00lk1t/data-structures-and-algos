@@ -48,4 +48,4 @@ function riverSizes(matrix) {
 }
 
 // Do not edit the line below.
-exports.riverSizes = riverSizes;
+module.exports = riverSizes;
