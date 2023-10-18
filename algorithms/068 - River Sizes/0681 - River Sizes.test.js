@@ -10,4 +10,14 @@ describe("Test suite for river sizes", () => {
     const result = riverSizes(matrix);
     expect(result).toStrictEqual(expected);
   });
+
+  it("Test simple matrix with no adjacent river cells", () => {
+    const matrix = [
+      [1, 0],
+      [0, 1],
+    ];
+    const expected = [1, 1];
+    const result = riverSizes(matrix);
+    expect(result).toStrictEqual(expected);
+  });
 });
