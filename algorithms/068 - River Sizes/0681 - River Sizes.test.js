@@ -20,4 +20,14 @@ describe("Test suite for river sizes", () => {
     const result = riverSizes(matrix);
     expect(result).toStrictEqual(expected);
   });
+
+  it("Test matrix with irregular river cells", () => {
+    const matrix = [
+      [1, 0, 1],
+      [0, 1, 1],
+    ];
+    const expected = [1, 3];
+    const result = riverSizes(matrix);
+    expect(result).toStrictEqual(expected);
+  });
 });
