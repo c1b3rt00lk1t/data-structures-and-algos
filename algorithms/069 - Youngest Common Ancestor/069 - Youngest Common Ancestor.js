@@ -6,17 +6,16 @@ class AncestralTree {
 }
 
 function getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo) {
-  const ancestorListOne = [];
+  const ancestorListOne = {};
   let ancestorOne = descendantOne;
   while (ancestorOne) {
-    ancestorListOne.push(ancestorOne);
+    ancestorListOne[ancestorOne.name] = true;
     ancestorOne = ancestorOne.ancestor;
   }
 
-  // const ancestorListTwo = [];
   let ancestorTwo = descendantTwo;
   while (ancestorTwo) {
-    if (ancestorListOne.find((anc1) => anc1.name === ancestorTwo.name)) {
+    if (ancestorListOne[ancestorTwo.name]) {
       return ancestorTwo;
     }
     ancestorTwo = ancestorTwo.ancestor;
